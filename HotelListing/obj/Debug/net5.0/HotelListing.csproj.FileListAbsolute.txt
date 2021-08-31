@@ -72,3 +72,8 @@ D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\runtimes\win-x86\n
 D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\AutoMapper.dll
+D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
