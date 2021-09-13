@@ -20,13 +20,16 @@ namespace HotelListing.Controllers
         private readonly IMapper _mapper;
 
         public CountryController(IUnitOfWork unitOfWork, ILogger<CountryController> logger,
-            IMapper mapper) 
+            IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _logger = logger;
             _mapper = mapper;
         }
+
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCountries()
         {
             try
@@ -37,27 +40,27 @@ namespace HotelListing.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Something Went Wrong int the {nameof(GetCountries)}");
+                _logger.LogError(ex, $"Something Went Wrong in the {nameof(GetCountries)}");
                 return StatusCode(500, "Internal Server Error. Please Try Again Later.");
             }
         }
 
         [HttpGet("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCountry(int id)
         {
             try
             {
-                var country = await _unitOfWork.Countries.Get(q => q.Id == id, new List<string> { "Hotels"}  );
+                var country = await _unitOfWork.Countries.Get(q => q.Id == id, new List<string> { "Hotels" });
                 var result = _mapper.Map<CountryDTO>(country);
                 return Ok(result);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Something Went Wrong int the {nameof(GetCountry)}");
+                _logger.LogError(ex, $"Something Went Wrong in the {nameof(GetCountry)}");
                 return StatusCode(500, "Internal Server Error. Please Try Again Later.");
             }
         }
-
-
     }
 }

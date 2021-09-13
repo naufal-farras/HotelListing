@@ -77,3 +77,8 @@ D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\AutoMapper.Extensi
 D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+D:\Program\ASP.NET\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll

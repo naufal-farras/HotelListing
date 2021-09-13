@@ -29,7 +29,6 @@ namespace HotelListing.Repository
         public void DeleteRange(IEnumerable<T> entities)
         {
             _db.RemoveRange(entities);
-
         }
 
         public async Task<T> Get(Expression<Func<T, bool>> expression, List<string> includes = null)
@@ -37,19 +36,19 @@ namespace HotelListing.Repository
             IQueryable<T> query = _db;
             if (includes != null)
             {
-                foreach (var includeProperty in includes)
+                foreach (var includePropery in includes)
                 {
-                    query = query.Include(includeProperty);
-              
+                    query = query.Include(includePropery);
                 }
             }
 
-            return await query.AsNoTracking().SingleOrDefaultAsync(expression);
+            return await query.AsNoTracking().FirstOrDefaultAsync(expression);
         }
 
         public async Task<IList<T>> GetAll(Expression<Func<T, bool>> expression = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, List<string> includes = null)
         {
             IQueryable<T> query = _db;
+
             if (expression != null)
             {
                 query = query.Where(expression);
@@ -57,20 +56,18 @@ namespace HotelListing.Repository
 
             if (includes != null)
             {
-                foreach (var includeProperty in includes)
+                foreach (var includePropery in includes)
                 {
-                    query = query.Include(includeProperty);
-
+                    query = query.Include(includePropery);
                 }
             }
 
-            if (orderBy !=null)
+            if (orderBy != null)
             {
                 query = orderBy(query);
             }
 
             return await query.AsNoTracking().ToListAsync();
-
         }
 
         public async Task Insert(T entity)
@@ -81,7 +78,6 @@ namespace HotelListing.Repository
         public async Task InsertRange(IEnumerable<T> entities)
         {
             await _db.AddRangeAsync(entities);
-
         }
 
         public void Update(T entity)
